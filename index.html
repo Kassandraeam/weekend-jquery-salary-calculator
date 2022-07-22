@@ -11,25 +11,57 @@
         <h1 id="salaryCalculatorTitle">Salary Calculator</h1>
         <h6>Remember poopybrain, ids use # and class uses .</h6>
         <div class="employeeInputs">
+
             <h2 id="addEmployeeTitle">Add Employee</h2>
-            <input id="employeeFirstName" type="text" placeholder="First Name"/>
-            <input id="lastName" type="text" placeholder="Last Name"/>
-            <input id="IDNumber" type="text" placeholder="ID"/>
-            <input id="jobTitle" type="text" placeholder="Title"/>
-            <input id="annualSalary" type="text" placeholder="Annual Salary"/>
+                <input id="employeeFirstName" type="text" placeholder="First Name"/>
+                <input id="lastName" type="text" placeholder="Last Name"/>
+                <input id="IDNumber" type="text" placeholder="ID"/>
+                <input id="jobTitle" type="text" placeholder="Title"/>
+                <input id="annualSalary" type="text" placeholder="Annual Salary"/>
+                <button id="submitButton">Submit</button>
         </div>
 
-        <div id="employeeTable">
-            <table>
-                <tr>
-                    <th>Test</th>
-                    <th>Test 2</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+        <div id="tableBegins">
+            <table id="employeeTable">
+                <tr id="table-rowHeaders">
+                    <th id="table-firstName">First Name</th>
+                    <th id="table-lastName">Last Name</th>
+                    <th id="table-ID">ID</th>
+                    <th id="table-title">Title</th>
+                    <th id="table-annualSalary">Annual Salary</th>
+                    <th id="table-deleteButton"></th>
                 </tr>
+                <!--  -->
+                <tr id="table-firstName"> 
+                    <!-- <td>Test</td> -->
+                </tr>
+                <tr id="table-lastName"></tr>
+                <tr id="table-ID"></tr>
+                <tr id="table-title"></tr>
+                <tr id="table-annualSalary"></tr>
+                <tr id="table-deleteButton"></tr>
             </table>
+        </div>
+        <div>
+            <h1 id="test">Total Monthly: <span id="totalMonthlyOnDOM">0</span></h1>
         </div>
     </body>
 </html>
+
+<!-- <table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table> -->

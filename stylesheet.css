@@ -1,10 +1,4 @@
-body {
-    background-color: rgb(240, 240, 240);
-    border: solid blue 2px;
-}
-
 #salaryCalculatorTitle {
     text-align: center;
-    color: black;
     border: solid blue 2px;
 };
