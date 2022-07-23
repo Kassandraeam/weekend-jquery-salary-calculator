@@ -9,5 +9,16 @@
 
 td {
     text-align: left;
+}
 
+#totalMonthly{
+    text-align: right;
+}
+
+thead{
+    border: 1px solid black
+}
+
+td {
+    border: 1px solid red
 }

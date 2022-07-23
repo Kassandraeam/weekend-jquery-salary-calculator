@@ -23,20 +23,21 @@
         <h2>Employees</h1>
         <div id="tableBegins">
             <table id="employeeTable">
-            <tbody>
-                <tr id="table-rowHeaders">
+
+                <thead>
+                <div id="table-rowHeaders">
                     <th id="table-firstName">First Name</th>
                     <th id="table-lastName">Last Name</th>
                     <th id="table-ID">ID</th>
                     <th id="table-title">Title</th>
                     <th id="table-annualSalary">Annual Salary</th>
-                    <th id="table-deleteButton"></th>
-                </tr>
-                <!--  -->
+                    <th id="table-deleteButton">Delete Employee Existance</th>
+                </div>
+                </thead>
+
+            <tbody>
                 <div id="tableContainer">
                     <tr id="table-firstName"> 
-                        <!-- <td>Test</td> -->
-                    </tr>
                     <tr id="table-lastName">
                     </tr>
                     <tr id="table-ID">
@@ -53,7 +54,7 @@
         </div>
 
         <div>
-            <h1 id="test">Total Monthly: <span id="totalMonthlyOnDOM">0</span></h1>
+            <h1 id="totalMonthly">Total Monthly: $<span id="totalMonthlyOnDOM">0</span></h1>
         </div>
 
     </body>
