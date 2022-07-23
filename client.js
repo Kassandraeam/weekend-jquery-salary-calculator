@@ -6,33 +6,20 @@ function readySteadyGo(){
     console.log('Ready Steady Go!');
     $('#submitButton').on('click', getValues);
     $('#submitButton').on('click', tooMuchMoney);
+    $('#tableContainer').on('click', urFired);
 
 }
+
 console.log('Hello World!');
 
 function getValues(){
-    //console.log('Got values?');
     let employeeFirstNameInput = $('#employeeFirstName').val();
     let lastNameInput = $('#lastName').val();
     let IDNumberInput = $('#IDNumber').val();
     let jobTitleInput = $('#jobTitle').val();
     let annualSalaryInput = $('#annualSalary').val();
-    let deleteButton = "<button>Delete employee</button>";
+    let deleteButton = "<button id='zap'>Delete employee</button>";
 
-
-    // $('#table-firstName').append('<tr><td>' + employeeFirstNameInput + '</td></tr>')
-    // $('#table-lastName').append('<tr><td>' + lastNameInput + '</td></tr>')
-    // $('#table-ID').append('<tr><td>' + IDNumberInput + '</td></tr>')
-    // $('#table-title').append('<tr><td>' + jobTitleInput + '</td></tr>')
-    // $('#table-annualSalary').append('<tr><td>' + annualSalaryInput + '</td></tr>')
-    // $('table-deleteButton').append('<tr><td>' + deleteButton + '</td></tr>')
-
-    // $('#tableContainer').append('<td>' + employeeFirstNameInput + '</td>')
-    // $('#tableContainer').append('<td>' + lastNameInput + '</td>')
-    // $('#tableContainer').append('<td>' + IDNumberInput + '</td>')
-    // $('#tableContainer').append('<td>' + jobTitleInput + '</td>')
-    // $('#tableContainer').append('<td>' + annualSalaryInput + '</td>')
-    // $('#tableContainer').append('<td>' + deleteButton + '</td>')
 
     $('#tableContainer').append(`
         <tr>
@@ -44,20 +31,6 @@ function getValues(){
             <td>${deleteButton}</td>
         </tr>
     `)
-
-    // $('#table-annualSalary').empty();
-    // $('#table-firstName').append('<td>' + employeeFirstNameInput + '</td>')
-    // $('#table-lastName').append('<td>' + lastNameInput + '</td>')
-    // $('#table-ID').append('<td>' + IDNumberInput + '</td>')
-    // $('#table-title').append('<td>' + jobTitleInput + '</td>')
-    // $('#table-annualSalary').append('<td>' + annualSalaryInput + '</td>')
-    //maybe this has to be in another function?
-    
-
-    // still need to append the employee information to the table
-    // so I want to target the table, and the append a new <td>
-    // it's appending to the table, but not starting a new line. 
-    // I think I need to add it to a container not just a specific row.
 
     $('#employeeFirstName').val('');
     $('#lastName').val('');
@@ -74,22 +47,23 @@ function getValues(){
     $('#totalMonthlyOnDOM').empty();
     $('#totalMonthlyOnDOM').append(`${totalMonthly}`);
 
+
+
+};
+
+function tooMuchMoney(){
+    //if totalMonthly > 20000, turn the container holding totalMonthly red.
+    if (totalMonthly >= 20000){
+        console.log('TOO MUCH MONEYY')
+        //https://linuxhint.com/change-css-jquery/#:~:text=You%20can%20change%20CSS%20using,by%20manipulating%20CSS%20style%20properties.
+        $('#totalMonthly').css({"background-color": "red"});
+    };
 }
-//https://www.geeksforgeeks.org/how-to-add-table-row-in-a-table-using-jquery/
-//markup = "<tr><td> + information + </td></td>"
-//tableBody = $("table tbody")
-//tableBody.append(markup)
 
-/*
-    markupFirstName = (`<tr><td> + ${employeeFirstNameInput} + </td></tr>`)
-    markupLastName = "<tr><td> +lastNameInput+ </td></tr>" 
-    markupIDNumber = "<tr><td> +IDNumberInput+ </td></tr>" 
-    markupJobTitle = "<tr><td> +jobTitleInput+ </td></tr>" 
-    markupAnnualSalary = "<tr><td> +annualSalaryInput+ </td></tr>"  
+//remove the employee from the DOM using the delete button.
+//Use .this()
 
-    tableBody = $("table tbody")
-    tableBody.append(markupFirstName);
-*/
-
-
-//$('#nameInput').val()
+//something that I want to do is have the table span the entire page.
+function urFired(){
+    console.log('FIRED!!!!');
+}

@@ -14,12 +14,23 @@
     border: solid blue 2px;
 }
 
-td {
-    text-align: left;
+table, td, tr {
+    border: 1px solid
+}
+
+#employeeTable, tr {
+    border: 1px solid
 }
 
 #totalMonthly{
+    display: inline-block;
     text-align: right;
+    border: solid rgb(0, 0, 0) 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+#table-deleteButton{
+    text-align: center;
 }
 
 
