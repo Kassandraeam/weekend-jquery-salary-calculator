@@ -1,3 +1,10 @@
+#tableContainer {
+    border: 1px solid green;
+}
+#employeeTable {
+    border: 1px solid green;
+}
+
 #salaryCalculatorTitle {
     text-align: center;
     border: solid blue 2px;
@@ -15,10 +22,5 @@ td {
     text-align: right;
 }
 
-thead{
-    border: 1px solid black
-}
 
-td {
-    border: 1px solid red
-}
+

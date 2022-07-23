@@ -4,7 +4,6 @@ let totalMonthly = 0;
 
 function readySteadyGo(){
     console.log('Ready Steady Go!');
-
     $('#submitButton').on('click', getValues);
 
 }
@@ -17,13 +16,33 @@ function getValues(){
     let IDNumberInput = $('#IDNumber').val();
     let jobTitleInput = $('#jobTitle').val();
     let annualSalaryInput = $('#annualSalary').val();
+    let deleteButton = "<button>Delete employee</button>";
 
 
-    $('#table-firstName').append('<tr><td>' + employeeFirstNameInput + '</td></tr>')
-    $('#table-lastName').append('<tr><td>' + lastNameInput + '</td></tr>')
-    $('#table-ID').append('<tr><td>' + IDNumberInput + '</td></tr>')
-    $('#table-title').append('<tr><td>' + jobTitleInput + '</td></tr>')
-    $('#table-annualSalary').append('<tr><td>' + annualSalaryInput + '</td></tr>')
+    // $('#table-firstName').append('<tr><td>' + employeeFirstNameInput + '</td></tr>')
+    // $('#table-lastName').append('<tr><td>' + lastNameInput + '</td></tr>')
+    // $('#table-ID').append('<tr><td>' + IDNumberInput + '</td></tr>')
+    // $('#table-title').append('<tr><td>' + jobTitleInput + '</td></tr>')
+    // $('#table-annualSalary').append('<tr><td>' + annualSalaryInput + '</td></tr>')
+    // $('table-deleteButton').append('<tr><td>' + deleteButton + '</td></tr>')
+
+    // $('#tableContainer').append('<td>' + employeeFirstNameInput + '</td>')
+    // $('#tableContainer').append('<td>' + lastNameInput + '</td>')
+    // $('#tableContainer').append('<td>' + IDNumberInput + '</td>')
+    // $('#tableContainer').append('<td>' + jobTitleInput + '</td>')
+    // $('#tableContainer').append('<td>' + annualSalaryInput + '</td>')
+    // $('#tableContainer').append('<td>' + deleteButton + '</td>')
+
+    $('#tableContainer').append(`
+        <tr>
+            <td>${employeeFirstNameInput}</td>
+            <td>${lastNameInput}</td>
+            <td>${IDNumberInput}</td>
+            <td>${jobTitleInput}</td>
+            <td>${annualSalaryInput}</td>
+
+        </tr>
+    `)
 
     // $('#table-annualSalary').empty();
     // $('#table-firstName').append('<td>' + employeeFirstNameInput + '</td>')
@@ -32,7 +51,6 @@ function getValues(){
     // $('#table-title').append('<td>' + jobTitleInput + '</td>')
     // $('#table-annualSalary').append('<td>' + annualSalaryInput + '</td>')
     //maybe this has to be in another function?
-    
     
 
     // still need to append the employee information to the table
