@@ -5,6 +5,7 @@ let totalMonthly = 0;
 function readySteadyGo(){
     console.log('Ready Steady Go!');
     $('#submitButton').on('click', getValues);
+    $('#submitButton').on('click', tooMuchMoney);
 
 }
 console.log('Hello World!');
@@ -40,7 +41,7 @@ function getValues(){
             <td>${IDNumberInput}</td>
             <td>${jobTitleInput}</td>
             <td>${annualSalaryInput}</td>
-
+            <td>${deleteButton}</td>
         </tr>
     `)
 
