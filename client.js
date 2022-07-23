@@ -18,11 +18,21 @@ function getValues(){
     let jobTitleInput = $('#jobTitle').val();
     let annualSalaryInput = $('#annualSalary').val();
 
+
+    // $('#table-annualSalary').empty();
     $('#table-firstName').append('<td>' + employeeFirstNameInput + '</td')
     $('#table-lastName').append('<td>' + lastNameInput + '</td')
     $('#table-ID').append('<td>' + IDNumberInput + '</td')
     $('#table-title').append('<td>' + jobTitleInput + '</td')
     $('#table-annualSalary').append('<td>' + annualSalaryInput + '</td')
+    //maybe this has to be in another function?
+    
+    
+
+    // still need to append the employee information to the table
+    // so I want to target the table, and the append a new <td>
+    // it's appending to the table, but not starting a new line. 
+    // I think I need to add it to a container not just a specific row.
 
     $('#employeeFirstName').val('');
     $('#lastName').val('');
@@ -31,9 +41,6 @@ function getValues(){
     $('#annualSalary').val('');
 
     console.log(`employeeNumber: ${employeeFirstNameInput}, lastName: ${lastNameInput}, IDNumber: ${IDNumberInput}, jobTitle: ${jobTitleInput}, annualSalary: ${annualSalaryInput}`);
-// still need to append the employee information to the table
-    // so I want to target the table, and the append a new <td>
-
 
     let monthlySalary = (Math.round((annualSalaryInput/12) * 100) /100);
     totalMonthly += monthlySalary;
@@ -43,6 +50,21 @@ function getValues(){
     $('#totalMonthlyOnDOM').append(`${totalMonthly}`);
 
 }
+//https://www.geeksforgeeks.org/how-to-add-table-row-in-a-table-using-jquery/
+//markup = "<tr><td> + information + </td></td>"
+//tableBody = $("table tbody")
+//tableBody.append(markup)
+
+/*
+    markupFirstName = (`<tr><td> + ${employeeFirstNameInput} + </td></tr>`)
+    markupLastName = "<tr><td> +lastNameInput+ </td></tr>" 
+    markupIDNumber = "<tr><td> +IDNumberInput+ </td></tr>" 
+    markupJobTitle = "<tr><td> +jobTitleInput+ </td></tr>" 
+    markupAnnualSalary = "<tr><td> +annualSalaryInput+ </td></tr>"  
+
+    tableBody = $("table tbody")
+    tableBody.append(markupFirstName);
+*/
 
 
 //$('#nameInput').val()
