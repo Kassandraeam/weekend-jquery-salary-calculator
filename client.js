@@ -19,12 +19,18 @@ function getValues(){
     let annualSalaryInput = $('#annualSalary').val();
 
 
+    $('#table-firstName').append('<tr><td>' + employeeFirstNameInput + '</td></tr>')
+    $('#table-lastName').append('<tr><td>' + lastNameInput + '</td></tr>')
+    $('#table-ID').append('<tr><td>' + IDNumberInput + '</td></tr>')
+    $('#table-title').append('<tr><td>' + jobTitleInput + '</td></tr>')
+    $('#table-annualSalary').append('<tr><td>' + annualSalaryInput + '</td></tr>')
+
     // $('#table-annualSalary').empty();
-    $('#table-firstName').append('<td>' + employeeFirstNameInput + '</td')
-    $('#table-lastName').append('<td>' + lastNameInput + '</td')
-    $('#table-ID').append('<td>' + IDNumberInput + '</td')
-    $('#table-title').append('<td>' + jobTitleInput + '</td')
-    $('#table-annualSalary').append('<td>' + annualSalaryInput + '</td')
+    // $('#table-firstName').append('<td>' + employeeFirstNameInput + '</td>')
+    // $('#table-lastName').append('<td>' + lastNameInput + '</td>')
+    // $('#table-ID').append('<td>' + IDNumberInput + '</td>')
+    // $('#table-title').append('<td>' + jobTitleInput + '</td>')
+    // $('#table-annualSalary').append('<td>' + annualSalaryInput + '</td>')
     //maybe this has to be in another function?
     
     
