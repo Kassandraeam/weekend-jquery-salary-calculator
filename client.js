@@ -6,8 +6,10 @@ function readySteadyGo(){
     console.log('Ready Steady Go!');
     $('#submitButton').on('click', getValues);
     $('#submitButton').on('click', tooMuchMoney);
-    $('#tableContainer').on('click', urFired);
-
+    //$(exists_now).on('click', exists_later, handleClickFn)
+    $('#employeeTable').on('click', '#zap', urFired);
+   // something to reference to that's already on the page,when we click the thing with the zap id, this function is called
+   // the parent function that already exists.
 }
 
 console.log('Hello World!');
@@ -20,6 +22,11 @@ function getValues(){
     let annualSalaryInput = $('#annualSalary').val();
     let deleteButton = "<button id='zap'>Delete employee</button>";
 
+    $('#employeeFirstName').val('');
+    $('#lastName').val('');
+    $('#IDNumber').val('');
+    $('#jobTitle').val('');
+    $('#annualSalary').val('');
 
     $('#tableContainer').append(`
         <tr>
@@ -27,18 +34,10 @@ function getValues(){
             <td>${lastNameInput}</td>
             <td>${IDNumberInput}</td>
             <td>${jobTitleInput}</td>
-            <td>${annualSalaryInput}</td>
+            <td>$${annualSalaryInput}</td>
             <td>${deleteButton}</td>
         </tr>
     `)
-
-    $('#employeeFirstName').val('');
-    $('#lastName').val('');
-    $('#IDNumber').val('');
-    $('#jobTitle').val('');
-    $('#annualSalary').val('');
-
-    console.log(`employeeNumber: ${employeeFirstNameInput}, lastName: ${lastNameInput}, IDNumber: ${IDNumberInput}, jobTitle: ${jobTitleInput}, annualSalary: ${annualSalaryInput}`);
 
     let monthlySalary = (Math.round((annualSalaryInput/12) * 100) /100);
     totalMonthly += monthlySalary;
@@ -47,7 +46,7 @@ function getValues(){
     $('#totalMonthlyOnDOM').empty();
     $('#totalMonthlyOnDOM').append(`${totalMonthly}`);
 
-
+    console.log(`employeeNumber: ${employeeFirstNameInput}, lastName: ${lastNameInput}, IDNumber: ${IDNumberInput}, jobTitle: ${jobTitleInput}, annualSalary: ${annualSalaryInput}`);
 
 };
 
@@ -66,4 +65,5 @@ function tooMuchMoney(){
 //something that I want to do is have the table span the entire page.
 function urFired(){
     console.log('FIRED!!!!');
+    $(this).closest('tr').remove();
 }

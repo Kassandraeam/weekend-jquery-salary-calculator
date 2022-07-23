@@ -24,7 +24,6 @@ table, td, tr {
 
 #totalMonthly{
     display: inline-block;
-    text-align: right;
     border: solid rgb(0, 0, 0) 3px;
     background-color: rgb(255, 255, 255);
 }
