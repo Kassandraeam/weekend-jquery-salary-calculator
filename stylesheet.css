@@ -1,36 +1,58 @@
-#tableContainer {
-    border: 1px solid green;
+table{
+    border-collapse: collapse;
 }
-#employeeTable {
-    border: 1px solid green;
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 }
 
 #salaryCalculatorTitle {
+    background-color: #6b6b6b;
+    color: white;
     text-align: center;
-    border: solid blue 2px;
+    /* border: 1px solid rgb(255, 0, 0); */
 };
 
-#table-firstName {
-    border: solid blue 2px;
-}
-
-table, td, tr {
-    border: 1px solid
-}
-
-#employeeTable, tr {
-    border: 1px solid
-}
+/*Selects every line of the table*/
+/* #employeeTable, td, tr {
+    border: 1px solid rgb(255, 0, 0);
+} */
 
 #totalMonthly{
     display: inline-block;
-    border: solid rgb(0, 0, 0) 3px;
-    background-color: rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 0, 0); */
+    background-color: rgb(38, 35, 121);
 }
 
-#table-deleteButton{
+/* This one centers the delete button */
+tbody{
     text-align: center;
+    border: 1px solid rgb(0, 0, 0);
 }
 
+tr:nth-child(even){
+    background-color: rgb(178, 178, 178);
+}
+
+#table-deleteButton, th{
+    color: #717171;
+    width: 50;
+}
+
+.blank_row{
+    height: 28.5px
+}
+
+th {
+    color: white;
+    background-color: #717171
+}
+
+#monthlyTotalToRight {
+    list-style-type: none;
+    padding-right: 20px;
+    display: inline-block;
+}
 
 

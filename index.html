@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
-    <head>
-        <meta charset='utf-8'>
+
+<head>
+    <meta charset='utf-8'>
     <title>Document</title>
     <link rel='stylesheet' href='stylesheet.css'>
     <script src = 'jquery-3.6.0.min.js' charset='utf-8'></script>
     <script src = 'client.js' charset='utf-8'></script>
-
 </head>
     <body>
+        
         <h1 id="salaryCalculatorTitle">Salary Calculator</h1>
-        <h6 id="reminder">Remember poopybrain, ids use # and class uses .</h6>
+        <!-- <h6 id="reminder">Remember poopybrain, ids use # and class uses .</h6> -->
+<!--✨✨✨✨✨TOP✨✨✨✨✨-->
         <div class="employeeInputs">
-
             <h2 id="addEmployeeTitle">Add Employee</h2>
             <div id="inputs">
                 <input id="employeeFirstName" type="text" placeholder="First Name"/>
@@ -24,48 +25,36 @@
             </div>
         </div>
         <h2>Employees</h2>
-            <!-- TABLE BEGINS -->
+<!--✨✨✨✨✨EMPLOYEE TABLE✨✨✨✨-->
         <div>
-            <table id="employeeTable">
+            <table id="employeeTable" border="1" width="100%">
                 <div id="table-rowHeaders">
-                <tr>
-                    <th id="table-firstName">First Name</th>
-                    <th id="table-lastName">Last Name</th>
-                    <th id="table-ID">ID</th>
-                    <th id="table-title">Title</th>
-                    <th id="table-annualSalary">Annual Salary</th>
-                    <th id="table-deleteButton"></th>
-                </tr>
+                    <tr>
+                        <th id="table-firstName">First Name</th>
+                        <th id="table-lastName">Last Name</th>
+                        <th id="table-ID">ID</th>
+                        <th id="table-title">Title</th>
+                        <th id="table-annualSalary">Annual Salary</th>
+                        <th id="table-deleteButton">IIIIIIIIII</th>
+                    </tr>
                 </div>
                     <!-- Appending here: -->
-                <div id="test">
-                <tbody id="tableContainer">
-                </tbody>
-                </div>
+                        <tbody id="tableContainer">
+                            <!--
+                                inputs
+                                added
+                                here
+                            -->
+                        </tbody>
+                        <tr class="blank_row">
+                            <td colspan="6"></td>
+                        </tr>
             </table>
         </div>
-
-        <div>
+<!--✨✨✨✨✨MONTHLY TOTAL✨✨✨✨-->
+        <div id="monthlyTotalToRight">
             <h1 id="totalMonthly">Total Monthly: $<span id="totalMonthlyOnDOM">0</span></h1>
         </div>
 
     </body>
 </html>
-
-<!-- <table>
-    <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
-    </tr>
-    <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-    </tr>
-  </table> -->                               
